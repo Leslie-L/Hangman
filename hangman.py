@@ -1,7 +1,16 @@
 import os
 
 
-import os
+#global variables
+level1=[]
+level2=[]
+
+#read the file and return all the words in the document "data"
+def getFile():
+    with open("files/datos.txt", "r", encoding="utf-8") as file:
+        level1=[word.rstrip("\n") for word in file]
+        return level1
+        
 
 def easy():
     pass
@@ -29,9 +38,12 @@ def main():
         os.system("cls")
 
 
-
-
 def run():
+    #get the information and choose if a word is level 1 or level 2
+    information=getFile()
+    level1=list(filter(lambda word: len(word)<=5,information))
+    level2=list(filter(lambda word: len(word)>5, information))
+    #start the game
     main()
 
 
