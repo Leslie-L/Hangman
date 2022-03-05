@@ -7,6 +7,7 @@ def getFile():
         level1=[word.rstrip("\n") for word in file]
         return level1
         
+
 def game(level):
     os.system("cls")
     picture=["-----------","-         |","-         O","-        / ","-        /| ","-        /|\ ","-        /  ","-        / \ ","-","_________________"]
@@ -72,12 +73,7 @@ def game(level):
     input("Continuar")
     
 
-
-
-
-
 def main(level1,level2):
-    
     opcion=""
     while opcion!="3":
         print("1) Facil")
